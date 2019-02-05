@@ -11,14 +11,8 @@ namespace TestProject
             //List of .NetLab Tasks
             var tasks = new IRunnable[]
             {
-                //struct tasks
-                new TaskLibrary.Tasks.Lesson2.Struct.Task1.Task1(),
-                new TaskLibrary.Tasks.Lesson2.Struct.Task2.Task2(),
-                //enum tasks
-                new TaskLibrary.Tasks.Lesson2.Enums.Task1.Task1(),
-                new TaskLibrary.Tasks.Lesson2.Enums.Task2.Task2(),
-                new TaskLibrary.Tasks.Lesson2.Enums.Task3.Task3(),
-        };
+                //TO DO
+            };
 
             foreach (var task in tasks)
             {
