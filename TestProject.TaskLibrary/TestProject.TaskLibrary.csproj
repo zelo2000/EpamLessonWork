@@ -8,4 +8,8 @@
     <ProjectReference Include="..\TestProject.Common.Core\TestProject.Common.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Tasks\Lesson2\" />
+  </ItemGroup>
+
 </Project>
