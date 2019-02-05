@@ -7,9 +7,13 @@ namespace TestProject.TaskLibrary.Tasks.Lesson2.Enums.Task2
 {
     public class Task2 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
-            SortedColors.Sort();
+            foreach (var color in SortedColors.Sort())
+            {
+                loger.Write(color.ToString() + "\n");
+            }
+            loger.Write("\n");
         }
     }
 }

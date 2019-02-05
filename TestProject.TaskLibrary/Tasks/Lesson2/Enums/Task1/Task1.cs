@@ -7,17 +7,17 @@ namespace TestProject.TaskLibrary.Tasks.Lesson2.Enums.Task1
 {
     public class Task1 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
-            Console.Write("Input month number: ");
+            loger.Write("Input month number: ");
             int n = Convert.ToInt32(Console.ReadLine());
             if (n <= 12 && n >= 1)
             {
-                Console.WriteLine(Enum.GetName(typeof(Months), n));
+                loger.Write(Enum.GetName(typeof(Months), n) + "\n");
             }
             else
             {
-                Console.WriteLine("Wrong output");
+                loger.Write("Wrong output\n");
             }
         }
     }

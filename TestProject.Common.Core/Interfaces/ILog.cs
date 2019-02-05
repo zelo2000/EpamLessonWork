@@ -1,12 +1,13 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace TestProject.Common.Core.Interfaces
 {
-    public interface IRunnable
+    public interface ILog
     {
-        void Run(ILog loger);
+        void Write(string log);
+
+        string Read();
     }
 }

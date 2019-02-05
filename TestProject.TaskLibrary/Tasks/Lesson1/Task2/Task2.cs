@@ -7,12 +7,12 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1
 {
     public class Task2 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
             //Rectangle with auto property
             RectangleWithProperty rect = new RectangleWithProperty(new Tuple<double, double>(0, 2), new Tuple<double, double>(2, 0));
-            Console.WriteLine("Perimetr: " + rect.Perimeter);
-            Console.WriteLine("Square: " + rect.Square);
+            loger.Write("Perimetr: " + rect.Perimeter + "\n");
+            loger.Write("Square: " + rect.Square + "\n");
         }
     }
 }

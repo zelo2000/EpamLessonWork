@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using TestProject.Common.Core.Displayers;
 using TestProject.Common.Core.Interfaces;
 
 namespace TestProject
@@ -16,7 +17,7 @@ namespace TestProject
 
             foreach (var task in tasks)
             {
-                task.Run();
+                task.Run(new ConsoleLoger());
             }
             Console.ReadLine();
         }

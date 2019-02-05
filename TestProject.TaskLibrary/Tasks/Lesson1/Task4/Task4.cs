@@ -7,16 +7,16 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1
 {
     public class Task4 : IRunnable
     {
-        public void Run()
+        public void Run(ILog loger)
         {
             //Static circle
-            Console.WriteLine("Circle:");
-            Console.WriteLine("Length: "+SCircle.Length(3));
-            Console.WriteLine("Square: " + SCircle.Square(3));
+            loger.Write("Circle:\n");
+            loger.Write("Length: " + SCircle.Length(3) + "\n");
+            loger.Write("Square: " + SCircle.Square(3) + "\n");
             //Static rectangle
-            Console.WriteLine("Rectangle:");
-            Console.WriteLine("Perimetr: " + SRectangle.Perimeter(new Tuple<double, double>(0, 2), new Tuple<double, double>(2, 0)));
-            Console.WriteLine("Square: " + SRectangle.Square(new Tuple<double, double>(0, 2), new Tuple<double, double>(2, 0)));
+            loger.Write("Rectangle:\n");
+            loger.Write("Perimetr: " + SRectangle.Perimeter(new Tuple<double, double>(0, 2), new Tuple<double, double>(2, 0)) + "\n");
+            loger.Write("Square: " + SRectangle.Square(new Tuple<double, double>(0, 2), new Tuple<double, double>(2, 0)) + "\n");
         }
     }
 }
