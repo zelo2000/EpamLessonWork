@@ -15,11 +15,14 @@ namespace TestProject
                 //TO DO
             };
 
+            ConsoleLoger consoleLoger = new ConsoleLoger();
+
             foreach (var task in tasks)
             {
-                task.Run(new ConsoleLoger());
+                task.Run(consoleLoger);
             }
-            Console.ReadLine();
+
+            consoleLoger.ReadKey();
         }
     }
 }

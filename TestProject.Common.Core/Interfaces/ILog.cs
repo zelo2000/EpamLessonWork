@@ -9,5 +9,7 @@ namespace TestProject.Common.Core.Interfaces
         void Write(string log);
 
         string Read();
+
+        void ReadKey();
     }
 }

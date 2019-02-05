@@ -14,6 +14,11 @@ namespace TestProject.Common.Core.Displayers
             return Console.ReadLine();
         }
 
+        public void ReadKey()
+        {
+            Console.ReadKey();
+        }
+
         public void Write(string log)
         {
             Console.Write(log);
