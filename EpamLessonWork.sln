@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{C6CDB552-5823-4372-A359-E7A45FBC7339}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject", "TestProject\TestProject.csproj", "{C6CDB552-5823-4372-A359-E7A45FBC7339}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject.Common.Core", "TestProject.Common.Core\TestProject.Common.Core.csproj", "{6CD8F8D8-6ADB-478D-BAE8-0408BFE8E12D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject.Common.Core", "TestProject.Common.Core\TestProject.Common.Core.csproj", "{6CD8F8D8-6ADB-478D-BAE8-0408BFE8E12D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject.TaskLibrary", "TestProject.TaskLibrary\TestProject.TaskLibrary.csproj", "{8AA8B4FD-C18E-4979-88DB-FD7A2A7891FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject.TaskLibrary", "TestProject.TaskLibrary\TestProject.TaskLibrary.csproj", "{8AA8B4FD-C18E-4979-88DB-FD7A2A7891FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
