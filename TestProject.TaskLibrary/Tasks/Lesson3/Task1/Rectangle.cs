@@ -7,9 +7,13 @@ namespace TestProject.TaskLibrary.Tasks.Lesson3.Task1
 {
     class Rectangle : Figure
     {
-        public override void Draw(ILog loger)
+        /// <summary>
+        /// The method that displays the name of the class that implements.
+        /// </summary>
+        /// <param name="logger"></param>
+        public override void Draw(ILog logger)
         {
-            loger.Write("Rectangle\n");
+            logger.Write("Rectangle\n");
         }
     }
 }

@@ -5,9 +5,12 @@ using TestProject.Common.Core.Interfaces;
 
 namespace TestProject.Common.Core.Displayers
 {
-    public class ConsoleLoger : ILog
+    /// <summary>
+    /// Сlass for console input/output.
+    /// </summary>
+    public class ConsoleLogger : ILog
     {
-        public ConsoleLoger() { }
+        public ConsoleLogger() { }
 
         public string Read()
         {

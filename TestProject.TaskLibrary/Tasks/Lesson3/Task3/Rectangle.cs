@@ -9,9 +9,13 @@ namespace TestProject.TaskLibrary.Tasks.Lesson3.Task3
     {
         public Rectangle(double x, double y) : base(x, y) { }
 
-        public override void Draw(ILog loger)
+        /// <summary>
+        /// The method that displays the name of the class that implements and coordinate of the top right corner.
+        /// </summary>
+        /// <param name="logger"></param>
+        public override void Draw(ILog logger)
         {
-            loger.Write("Rectangle " + X + " " + Y + "\n");
+            logger.Write($"Rectangle ({X}, {Y})\n");
         }
     }
 }

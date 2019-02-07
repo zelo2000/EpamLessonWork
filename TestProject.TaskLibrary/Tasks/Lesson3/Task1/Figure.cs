@@ -7,6 +7,10 @@ namespace TestProject.TaskLibrary.Tasks.Lesson3.Task1
 {
     public abstract class Figure
     {
-        public abstract void Draw(ILog loger);
+        /// <summary>
+        /// The method that displays the name of the class that implements.
+        /// </summary>
+        /// <param name="logger"></param>
+        public abstract void Draw(ILog logger);
     }
 }

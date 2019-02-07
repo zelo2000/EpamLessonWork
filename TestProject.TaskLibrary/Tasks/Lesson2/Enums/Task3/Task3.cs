@@ -7,9 +7,9 @@ namespace TestProject.TaskLibrary.Tasks.Lesson2.Enums.Task3
 {
     public class Task3 : IRunnable
     {
-        public void Run(ILog loger)
+        public void Run(ILog logger)
         {
-            loger.Write(string.Format("Long is in [ {0}, {1} ]", (long)LongRange.Min, (long)LongRange.Max));
+            logger.Write($"Long is in [ {(long)LongRange.Min}, {(long)LongRange.Max} ]");
         }
     }
 }

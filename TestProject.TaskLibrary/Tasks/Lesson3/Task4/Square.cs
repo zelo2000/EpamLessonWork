@@ -7,9 +7,13 @@ namespace TestProject.TaskLibrary.Tasks.Lesson3.Task4
 {
     class Square : IDrawable
     {
-        public void Draw(ILog loger)
+        /// <summary>
+        /// The method that displays the name of the class that implements.
+        /// </summary>
+        /// <param name="logger"></param>
+        public void Draw(ILog logger)
         {
-            loger.Write("Square\n");
+            logger.Write("Square\n");
         }
     }
 }

@@ -7,14 +7,14 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1
 {
     public class Task5 : IRunnable
     {
-        public void Run(ILog loger)
+        public void Run(ILog logger)
         {
-            ComplexNumber n1 = new ComplexNumber(2, 3);
-            ComplexNumber n2 = new ComplexNumber(4, 5);
+            var n1 = new ComplexNumber(2, 3);
+            var n2 = new ComplexNumber(4, 5);
             ComplexNumber n3 = n1 * n2;
-            loger.Write(string.Format("Multiplication of two complex number: {0} + {1}i\n", n3.Real, n3.Imaginary));
+            logger.Write($"Multiplication of two complex number: {n3.Real} + {n3.Imaginary}i\n");
             ComplexNumber n4 = n1 / n2;
-            loger.Write(string.Format("Division of two complex number: {0} + {1}i\n", n4.Real, n4.Imaginary));
+            logger.Write($"Division of two complex number: {n4.Real} + {n4.Imaginary}i\n");
         }
     }
 }

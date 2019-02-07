@@ -7,12 +7,12 @@ namespace TestProject.TaskLibrary.Tasks.Lesson3.Task1
 {
     public class Task1 : IRunnable
     {
-        public void Run(ILog loger)
+        public void Run(ILog logger)
         {
             Rectangle rect = new Rectangle();
-            rect.Draw(loger);
+            rect.Draw(logger);
             Square square = new Square();
-            square.Draw(loger);
+            square.Draw(logger);
         }
     }
 }

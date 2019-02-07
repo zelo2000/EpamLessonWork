@@ -19,14 +19,14 @@ namespace TestProject
                 //TO DO
             };
 
-            ConsoleLoger consoleLoger = new ConsoleLoger();
+            ConsoleLogger consoleLogger = new ConsoleLogger();
 
             foreach (var task in tasks)
             {
-                task.Run(consoleLoger);
+                task.Run(consoleLogger);
             }
 
-            consoleLoger.ReadKey();
+            consoleLogger.ReadKey();
         }
     }
 }

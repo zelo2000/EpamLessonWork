@@ -7,12 +7,15 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1
 {
     public class Task1 : IRunnable
     {
-        public void Run(ILog loger)
+        public void Run(ILog logger)
         {
             //Rectangle with methods
-            RectangleWithMethod rect = new RectangleWithMethod(new Tuple<double, double>(0, 2), new Tuple<double, double>(2, 0));
-            loger.Write("Perimetr: " + rect.Perimeter() + "\n");
-            loger.Write("Square: " + rect.Square() + "\n");
+            var x = new Tuple<double, double>(0, 2);
+            var y = new Tuple<double, double>(2, 0);
+
+            RectangleWithMethod rect = new RectangleWithMethod(x, y);
+            logger.Write($"Perimetr: {rect.Perimeter()}\n");
+            logger.Write($"Square: {rect.Square()}\n");
         }
     }
 }

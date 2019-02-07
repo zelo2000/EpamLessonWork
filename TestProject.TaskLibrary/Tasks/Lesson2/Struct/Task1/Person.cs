@@ -14,11 +14,11 @@ namespace TestProject.TaskLibrary.Tasks.Lesson2.Struct.Task1
         {
             if (n > Age)
             {
-                return Name + " " + Surname + " younger than " + n;
+                return $"{Name} {Surname}  younger than {n}\n";
             }
             else
             {
-                return Name + " " + Surname + " older than " + n;
+                return $"{Name} {Surname} older than {n}\n";
             }
         }
     }
