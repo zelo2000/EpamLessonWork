@@ -1,5 +1,5 @@
 # EpamLessonWork
-Homework for courses in EPAM
+Lessonwork from courses in EPAM
 
 ## Lesson1 
 Tasks on the topic of classes.
