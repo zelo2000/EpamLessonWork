@@ -1,4 +1,5 @@
 # EpamLessonWork
+Homework for courses in EPAM
 
 ## Lesson1 
 Tasks on the topic of classes.
@@ -6,7 +7,7 @@ Tasks on the topic of classes.
 A **_Rectangle_** class with methods that allow you to count perimeter and square of rectangle. The corners of the left top and right bottom corners are passed to the class constructor.
 ### Task2
 Realized Task1 using auto-implemented properties.
-###Task3
+### Task3
 A **_Circle_** class with methods that allow you to calculate the length and square of the circle. The radius is passed by the parameter to the appropriate method. Constants is static fields in the class.
 ### Task4
 Realized Task1 and Task3 using static class.The coordinates of the points are passed by the parameters to the corresponding methods.
