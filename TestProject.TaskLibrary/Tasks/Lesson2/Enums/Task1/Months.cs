@@ -4,6 +4,9 @@ using System.Text;
 
 namespace TestProject.TaskLibrary.Tasks.Lesson2.Enums.Task1
 {
+    /// <summary>
+    /// Enum of months.
+    /// </summary>
     enum Months
     {
         January = 1,

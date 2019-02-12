@@ -19,17 +19,17 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1
         #endregion
 
         #region overloaded operators
-        public static ComplexNumber operator *(ComplexNumber a, ComplexNumber b)
+        public static ComplexNumber operator *(ComplexNumber left, ComplexNumber right)
         {
-            double real = a.Real * b.Real - a.Imaginary * b.Imaginary;
-            double img = a.Real * b.Imaginary + a.Imaginary * b.Real;
+            double real = left.Real * right.Real - left.Imaginary * right.Imaginary;
+            double img = left.Real * right.Imaginary + left.Imaginary * right.Real;
             return new ComplexNumber(real, img);
         }
 
-        public static ComplexNumber operator /(ComplexNumber a, ComplexNumber b)
+        public static ComplexNumber operator /(ComplexNumber left, ComplexNumber right)
         {
-            double real = (a.Real * b.Real + a.Imaginary * b.Imaginary) / (b.Real * b.Real + b.Imaginary * b.Imaginary);
-            double img = (a.Imaginary * b.Real - a.Real * b.Imaginary) / (b.Real * b.Real + b.Imaginary * b.Imaginary);
+            double real = (left.Real * right.Real + left.Imaginary * right.Imaginary) / (right.Real * right.Real + right.Imaginary * right.Imaginary);
+            double img = (left.Imaginary * right.Real - left.Real * right.Imaginary) / (right.Real * right.Real + right.Imaginary * right.Imaginary);
             return new ComplexNumber(real, img);
         }
         #endregion

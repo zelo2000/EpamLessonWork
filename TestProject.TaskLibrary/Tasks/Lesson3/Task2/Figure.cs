@@ -16,7 +16,7 @@ namespace TestProject.TaskLibrary.Tasks.Lesson3.Task2
         /// </summary>
         public double Y { get; private set; }
 
-        public Figure(double x, double y)
+        protected Figure(double x, double y)
         {
             X = x;
             Y = y;

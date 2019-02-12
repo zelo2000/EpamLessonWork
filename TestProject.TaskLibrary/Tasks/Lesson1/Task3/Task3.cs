@@ -11,8 +11,8 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1
         {
             //Circle
             Circle crl = new Circle();
-            logger.Write($"Length: {crl.Length(3)}\n");
-            logger.Write($"Square: {crl.Square(3)}\n");
+            logger.Write($"Length: {crl.GetLength(3)}\n");
+            logger.Write($"Square: {crl.GetSquare(3)}\n");
         }
     }
 }

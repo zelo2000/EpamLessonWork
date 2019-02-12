@@ -15,12 +15,12 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1
             this.rightDown = rightDown;
         }
 
-        public double Perimeter()
+        public double GetPerimeter()
         {
             return (rightDown.Item1 - leftTop.Item1) * 2 + (leftTop.Item2 - rightDown.Item2) * 2;
         }
 
-        public double Square()
+        public double GetSquare()
         {
             return (rightDown.Item1 - leftTop.Item1) * (leftTop.Item2 - rightDown.Item2);
         }

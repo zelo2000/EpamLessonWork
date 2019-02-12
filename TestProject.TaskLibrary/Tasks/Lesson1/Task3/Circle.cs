@@ -10,11 +10,11 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1
 
         public Circle() { }
 
-        public double Length(double r)
+        public double GetLength(double r)
         {
             return 2 * Pi * r;
         }
-        public double Square(double r)
+        public double GetSquare(double r)
         {
             return Pi * r * r;
         }

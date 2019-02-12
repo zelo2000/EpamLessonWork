@@ -10,7 +10,12 @@ namespace TestProject.TaskLibrary.Tasks.Lesson2.Struct.Task1
         public string Surname { get; set; }
         public int Age { get; set; }
 
-        public string AgeChecker(int n)
+        /// <summary>
+        /// A method that compares age.
+        /// </summary>
+        /// <param name="n">The age with which the person's age will be compared</param>
+        /// <returns>formatеed string {Name} {Surname}  younger than {n} or {Name} {Surname} older than {n}</returns>
+        public string AgeCheck(int n)
         {
             if (n > Age)
             {

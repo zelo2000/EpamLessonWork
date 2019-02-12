@@ -18,8 +18,8 @@ namespace TestProject.TaskLibrary.Tasks.Lesson2.Struct.Task1
             logger.Write("Input age: ");
             person1.Age = Convert.ToInt32(Console.ReadLine());
 
-            logger.Write(person1.AgeChecker(12));
-            logger.Write(person1.AgeChecker(9));
+            logger.Write(person1.AgeCheck(12));
+            logger.Write(person1.AgeCheck(9));
         }
     }
 }

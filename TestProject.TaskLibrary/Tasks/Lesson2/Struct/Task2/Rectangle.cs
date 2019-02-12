@@ -17,6 +17,10 @@ namespace TestProject.TaskLibrary.Tasks.Lesson2.Struct.Task2
         /// </summary>
         public double Y { get; set; }
 
+        /// <summary>
+        /// A method that calculate perimeter of rectangle.
+        /// </summary>
+        /// <returns>Perimeter of rectangle.</returns>
         public double Perimeter()
         {
             return 2 * Width + 2 * Height;

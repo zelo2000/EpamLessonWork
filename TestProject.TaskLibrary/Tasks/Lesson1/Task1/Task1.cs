@@ -14,8 +14,8 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1
             var y = new Tuple<double, double>(2, 0);
 
             RectangleWithMethod rect = new RectangleWithMethod(x, y);
-            logger.Write($"Perimetr: {rect.Perimeter()}\n");
-            logger.Write($"Square: {rect.Square()}\n");
+            logger.Write($"Perimetr: {rect.GetPerimeter()}\n");
+            logger.Write($"Square: {rect.GetSquare()}\n");
         }
     }
 }
