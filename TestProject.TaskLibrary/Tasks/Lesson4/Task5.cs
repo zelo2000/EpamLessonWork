@@ -11,23 +11,23 @@ namespace TestProject.TaskLibrary.Tasks.Lesson4
         {
             int m = Convert.ToInt32(logger.Read());
             int n = Convert.ToInt32(logger.Read());
-            int[][] doubleDimensionArray = new int[m][];
+            int[][] jaggedArray = new int[m][];
 
             for (var i = 0; i < m; i++)
             {
                 var tempArray = Utility.ReadArray(logger);
-                doubleDimensionArray[i] = tempArray;
+                jaggedArray[i] = tempArray;
             }
 
             int[] maxVector = new int[m];
             for (var i = 0; i < m; i++)
             {
-                int max = doubleDimensionArray[i][0];
+                int max = jaggedArray[i][0];
                 for (var j = 1; j < n; j++)
                 {
-                    if (doubleDimensionArray[i][j] > max)
+                    if (jaggedArray[i][j] > max)
                     {
-                        max = doubleDimensionArray[i][j];
+                        max = jaggedArray[i][j];
                     }
                 }
                 maxVector[i] = max;
