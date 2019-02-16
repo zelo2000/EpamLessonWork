@@ -7,16 +7,27 @@ namespace TestProject.TaskLibrary.Tasks.Lesson3.Task3
 {
     public class Figure
     {
+        /// <summary>
+        /// Coordinate X of the top right corner
+        /// </summary>
         public double X { get; private set; }
+        /// <summary>
+        /// Coordinate Y of the top right corner
+        /// </summary>
         public double Y { get; private set; }
+
         public Figure(double x, double y)
         {
             X = x;
             Y = y;
         }
-        public virtual void Draw(ILog loger)
+        /// <summary>
+        /// The method that displays the name of the class that implements and coordinate of the top right corner.
+        /// </summary>
+        /// <param name="logger"></param>
+        public virtual void Draw(ILog logger)
         {
-            loger.Write("Figure " + X + " " + Y + "\n");
+            logger.Write($"Figure ({X}, {Y})\n");
         }
     }
 }

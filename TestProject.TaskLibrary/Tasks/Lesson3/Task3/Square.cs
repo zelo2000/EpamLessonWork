@@ -9,9 +9,13 @@ namespace TestProject.TaskLibrary.Tasks.Lesson3.Task3
     {
         public Square(double x, double y) : base(x, y) { }
 
-        public override void Draw(ILog loger)
+        /// <summary>
+        /// The method that displays the name of the class that implements and coordinate of the top right corner.
+        /// </summary>
+        /// <param name="logger"></param>
+        public override void Draw(ILog logger)
         {
-            loger.Write("Square " + X + " " + Y + "\n");
+            logger.Write($"Square ({X}, {Y})\n");
         }
     }
 }

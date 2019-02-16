@@ -7,14 +7,14 @@ namespace TestProject.TaskLibrary.Tasks.Lesson2.Struct.Task2
 {
     public class Task2 : IRunnable
     {
-        public void Run(ILog loger)
+        public void Run(ILog logger)
         {
             Rectangle rect = new Rectangle
             {
                 Height = 2,
                 Width = 3
             };
-            loger.Write(rect.Perimeter() + "\n");
+            logger.Write(rect.Perimeter() + "\n");
         }
     }
 }

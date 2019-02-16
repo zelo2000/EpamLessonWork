@@ -8,11 +8,11 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1
     {
         private const double Pi = 3.14159;
 
-        public static double Length(double r)
+        public static double GetLength(double r)
         {
             return 2 * Pi * r;
         }
-        public static double Square(double r)
+        public static double GetSquare(double r)
         {
             return Pi * r * r;
         }

@@ -8,6 +8,7 @@ namespace TestProject.TaskLibrary.Tasks.Lesson1
     {
         private readonly Tuple<double, double> leftTop;
         private readonly Tuple<double, double> rightDown;
+
         public double Perimeter { get; }
         public double Square { get; }
 

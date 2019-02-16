@@ -7,17 +7,17 @@ namespace TestProject.TaskLibrary.Tasks.Lesson3.Task4
 {
     public class Task4 : IRunnable
     {
-        public void DrawAll(ILog loger, params IDrawable[] array)
+        public void DrawAll(ILog logger, params IDrawable[] array)
         {
             foreach (var figure in array)
             {
-                figure.Draw(loger);
+                figure.Draw(logger);
             }
         }
 
-        public void Run(ILog loger)
+        public void Run(ILog logger)
         {
-            DrawAll(loger, new Square(), new Rectangle(), new Rectangle(), new Rectangle(), new Square());
+            DrawAll(logger, new Square(), new Rectangle(), new Rectangle(), new Rectangle(), new Square());
         }
     }
 }
