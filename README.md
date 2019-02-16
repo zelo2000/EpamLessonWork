@@ -33,6 +33,7 @@ An extension method has been created that displays all values to the console in 
 Created enum **_LongRange_** in which there is a minimum and maximum value of type long (Max = 9223372036854775807, Min = -9223372036854775808). Values are displayed on the console using the created enum.
 
 ## Lesson3
+Tasks on the topic of inheritance.
 ### Task1
 Class **_Figure_** with the abstract method Draw. Also Square and **_Rectangle_** classes which are derived from the **_Figure_** where created. Draw displays the name of the class in which this method is implemented.
 ### Task2
@@ -41,3 +42,27 @@ Using the previous task, added the X and Y property to the class **_Figure_**, a
 Using the previous task changed the abstract class Draw to the virtual one and implemented it as in classes **_Square_** and **_Rectangle_**.
 ### Task4
 Using the previous task, moved the method Draw to the interface **_IDrawable_**. Created a DrawAll method in which the objects of the created classes are transmitted and in the loop call the Draw method for each of them.
+
+## Lesson4
+Tasks on the topic of array.
+### Task1
+The program that raises each element of the array to the cube.
+### Task2
+A program that displays amount of prime number in the array.
+### Task3
+Checks whether the array is semimetric.
+### Task4
+Makes an array that is the maximal element in each line of two-dimensional array of integers (m x n, m > 1, n > 1).
+### Task5
+Do task 4 using a jagged array.
+
+## Lesson5
+Tasks on the topic of list.
+### Task1
+Outputted to the console **_Name_**s and **_Age_**s people which contains in list of type **_Person_**.
+### Task2
+Added to the list two more **_Persons_**. Outputted to the console **_PhonesNumber_**s people which contains in list.
+### Task3
+A list is created with randomly generated elements of type string (length of the words 4, all characters are capital letters). All elements that are repeated and begin with the symbol 'Z' are removed. List is also sorted in descending order (z-a).
+Number of itemss in the list before and after the transformations  are desplayed. Created a DisplayPage method which when you call it display to the console the corresponding page of the updated list (the number of items on the page is constant: 5).
+The page number you want to output was read from the console. If the entered string is not a number then the program will stop.
