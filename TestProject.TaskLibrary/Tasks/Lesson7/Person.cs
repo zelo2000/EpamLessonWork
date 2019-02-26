@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TestProject.TaskLibrary.Tasks.Lesson7
+namespace TestProject.TaskLibrary.Tasks.Lesson5
 {
     public class Person
     {
