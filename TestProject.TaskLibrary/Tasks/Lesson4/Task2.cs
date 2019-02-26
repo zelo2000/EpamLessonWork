@@ -7,6 +7,22 @@ namespace TestProject.TaskLibrary.Tasks.Lesson4
 {
     public class Task2 : IRunnable
     {
+        public void Run(ILog logger)
+        {
+            int n = Convert.ToInt32(logger.Read());
+            int[] array = Utility.ReadArray(logger);
+            int sum = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                if (IsPrime(array[i]))
+                {
+                    sum += 1;
+                }
+            }
+
+            logger.Write(sum + "\n");
+        }
 
         private bool IsPrime(int number)
         {
@@ -25,23 +41,6 @@ namespace TestProject.TaskLibrary.Tasks.Lesson4
                 return false;
             }
             return true;
-        }
-
-        public void Run(ILog logger)
-        {
-            int n = Convert.ToInt32(logger.Read());
-            int[] array = Utility.ReadArray(logger);
-            int sum = 0;
-
-            for (int i = 0; i < n; i++)
-            {
-                if (IsPrime(array[i]))
-                {
-                    sum += 1;
-                }
-            }
-
-            logger.Write(sum + "\n");
         }
     }
 }
