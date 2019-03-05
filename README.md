@@ -86,7 +86,7 @@ Number of itemss in the list before and after the transformations  are desplayed
 The page number you want to output was read from the console. If the entered string is not a number then the program will stop.
 
 ## Lesson8
-Tasks on the topic of LINQ
+Tasks on the topic of Exception
 ### Task1-4
 StackOverflowException and IndexOutOfRangeException have been generated. IndexOutOfRangeException has been  catched.
 ### Task5
