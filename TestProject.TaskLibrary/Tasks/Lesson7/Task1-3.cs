@@ -18,8 +18,8 @@ namespace TestProject.TaskLibrary.Tasks.Lesson7
                 new Person("Romko", 21, new List<string>{ "067","095"}),
             };
 
-            Console.WriteLine("Name and Age of people:");
-            Console.WriteLine(string.Join("\n", people.Select(x => x.Name + " " + x.Age)));
+            logger.Write("Name and Age of people:\n");
+            logger.Write(string.Join("\n", people.Select(x => x.Name + " " + x.Age)));
 
             people.AddRange(new List<Person>
             {
@@ -27,12 +27,12 @@ namespace TestProject.TaskLibrary.Tasks.Lesson7
                 new Person("Nadia", 32, new List<string> { "097", "095" })
             });
             var numbers = people.SelectMany(x => x.PhoneNumbers);
-            Console.WriteLine("Phone numbeer of all people:");
-            Console.WriteLine(string.Join("\n", numbers));
+            logger.Write("Phone numbeer of all people:\n");
+            logger.Write(string.Join("\n", numbers));
 
-            Console.WriteLine("Phone numbeer of people which age less than 20:");
+            logger.Write("Phone numbeer of people which age less than 20:\n");
             var olderThan = people.Where(x => x.Age < 20).SelectMany(x => x.PhoneNumbers);
-            Console.WriteLine(string.Join("\n", olderThan));
+            logger.Write(string.Join("\n", olderThan));
         }
     }
 }

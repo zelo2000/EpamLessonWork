@@ -10,7 +10,7 @@ namespace TestProject.TaskLibrary.Tasks.Lesson2.Enums.Task1
         public void Run(ILog logger)
         {
             logger.Write("Input month number: ");
-            int n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(logger.Read());
             if ((n <= 12) && (n >= 1))
             {
                 logger.Write(Enum.GetName(typeof(Months), n) + "\n");
