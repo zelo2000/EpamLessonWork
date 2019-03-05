@@ -6,7 +6,7 @@ namespace TestProject.TaskLibrary.Tasks.Lesson6
 {
     public class Rectangular : IShape
     {
-        public Point LeftTop = new Point(0,0);
+        public Point LeftTop = new Point(0, 0);
         public Point RightTop = new Point(0, 0);
         public Point RightBottom = new Point(0, 0);
         public Point LeftBottom = new Point(0, 0);
@@ -36,11 +36,15 @@ namespace TestProject.TaskLibrary.Tasks.Lesson6
             RightBottom.Y = Math.Max(first.RightBottom.Y, second.RightBottom.Y);
         }
 
+        public bool IsPointInRectangular(Rectangular r, Point p)
+        {
+        }
+
         public Rectangular GetIntersection(Rectangular first, Rectangular second)
         {
             Rectangular result = new Rectangular();
 
-            
+
 
             return result;
         }
