@@ -59,9 +59,9 @@ Do task 4 using a jagged array.
 ## Lesson5
 Tasks on the topic of list.
 ### Task1
-Outputted to the console **_Name_** s and **_Age_** s people which contains in list of type **_Person_**.
+Outputted to the console **_Name_** and **_Age_** people which contains in list of type **_Person_**.
 ### Task2
-Added to the list two more **_Persons_**. Outputted to the console **_PhonesNumber_** s people which contains in list.
+Added to the list two more **_Person_**. Outputted to the console phone numbers people which contains in list.
 ### Task3
 A list is created with randomly generated elements of type string (length of the words 4, all characters are capital letters). All elements that are repeated and begin with the symbol 'Z' are removed. List is also sorted in descending order (z-a).
 Number of itemss in the list before and after the transformations  are desplayed. Created a DisplayPage method which when you call it display to the console the corresponding page of the updated list (the number of items on the page is constant: 5).
@@ -75,9 +75,9 @@ The page number you want to output was read from the console. If the entered str
 ## Lesson7
 Tasks on the topic of LINQ
 ### Task1
-Outputted to the console **_Name_** s and **_Age_** s people which contains in list of type **_Person_**.
+Outputted to the console **_Name_** and **_Age_** people which contains in list of type **_Person_**.
 ### Task2
-Added to the list two more **_Person_**. Outputted to the console **_PhonesNumber_** s people which contains in list.
+Added to the list two more **_Person_**. Outputted to the console phone numbers people which contains in list.
 ### Task3
 Using LINQ people whose age less than 20 has been selected
 ### Task4
