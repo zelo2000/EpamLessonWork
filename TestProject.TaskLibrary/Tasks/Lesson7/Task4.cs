@@ -2,32 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 using TestProject.Common.Core.Interfaces;
+using System.Linq;
 
-namespace TestProject.TaskLibrary.Tasks.Lesson5
+namespace TestProject.TaskLibrary.Tasks.Lesson7
 {
-    public class Task3 : IRunnable
+    public class Task4 : IRunnable
     {
 
         const int NumberWordsInPage = 5;
         const int NumberLetersInWord = 4;
-
-        private List<string> GenerateList(int length)
-        {
-            Random random = new Random(DateTime.Now.Second);
-            string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            List<string> words = new List<string>();
-
-            for (var i = 0; i < length; i++)
-            {
-                StringBuilder result = new StringBuilder(length);
-                for (int j = 0; j < NumberLetersInWord; j++)
-                {
-                    result.Append(characters[random.Next(characters.Length)]);
-                }
-                words.Add(ToString());
-            }
-            return words;
-        }
 
         public void DisplayPage(int number, List<string> words, ILog logger)
         {
@@ -44,24 +27,10 @@ namespace TestProject.TaskLibrary.Tasks.Lesson5
             List<string> words = GenerateList(amountOfElement);
 
             logger.Write($"Start number of elements: {words.Count}\n");
-            for (var i = 0; i < words.Count; i++)
-            {
-                if (words[i][0] == 'Z')
-                {
-                    words.Remove(words[i]);
-                }
-                else
-                {
-                    for (var j = i + 1; j < words.Count; j++)
-                    {
-                        if (words[j] == words[i])
-                        {
-                            words.RemoveAt(j);
-                        }
-                    }
-                }
-            }
-            words.Sort(new Comparison<string>((i1, i2) => i2.CompareTo(i1)));
+            words.RemoveAll(x => x.First() == 'Z');
+            words = words.Distinct()
+                         .OrderByDescending(x => x)
+                         .ToList();
             logger.Write($"Number of elements after delete: {words.Count}\n");
 
             logger.Write("Input page number: ");
