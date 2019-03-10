@@ -11,24 +11,6 @@ namespace TestProject.TaskLibrary.Tasks.Lesson5
         const int NumberWordsInPage = 5;
         const int NumberLetersInWord = 4;
 
-        private List<string> GenerateList(int length)
-        {
-            Random random = new Random(DateTime.Now.Second);
-            string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            List<string> words = new List<string>();
-
-            for (var i = 0; i < length; i++)
-            {
-                StringBuilder result = new StringBuilder(length);
-                for (int j = 0; j < NumberLetersInWord; j++)
-                {
-                    result.Append(characters[random.Next(characters.Length)]);
-                }
-                words.Add(ToString());
-            }
-            return words;
-        }
-
         public void DisplayPage(int number, List<string> words, ILog logger)
         {
             foreach (string word in words.GetRange((number - 1) * NumberWordsInPage, NumberWordsInPage))
@@ -84,7 +66,7 @@ namespace TestProject.TaskLibrary.Tasks.Lesson5
                 {
                     result.Append(characters[random.Next(characters.Length)]);
                 }
-                words.Add(result.ToString());
+                words.Add(ToString());
             }
             return words;
         }

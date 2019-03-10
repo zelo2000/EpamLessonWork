@@ -12,14 +12,6 @@ namespace TestProject.TaskLibrary.Tasks.Lesson7
         const int NumberWordsInPage = 5;
         const int NumberLetersInWord = 4;
 
-        public void DisplayPage(int number, List<string> words, ILog logger)
-        {
-            foreach (string word in words.GetRange((number - 1) * NumberWordsInPage, NumberWordsInPage))
-            {
-                logger.Write(word + "\n");
-            }
-        }
-
         public void Run(ILog logger)
         {
             logger.Write("Input words number: ");
@@ -56,6 +48,14 @@ namespace TestProject.TaskLibrary.Tasks.Lesson7
                 words.Add(result.ToString());
             }
             return words;
+        }
+
+        private void DisplayPage(int number, List<string> words, ILog logger)
+        {
+            foreach (string word in words.GetRange((number - 1) * NumberWordsInPage, NumberWordsInPage))
+            {
+                logger.Write(word + "\n");
+            }
         }
     }
 }
