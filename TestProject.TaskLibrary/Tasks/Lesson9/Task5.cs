@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using TestProject.Common.Core.Interfaces;
 
-namespace TestProject.TaskLibrary.Tasks.Lesson8
+namespace TestProject.TaskLibrary.Tasks.Lesson9
 {
     public class Task5 : IRunnable
     {
@@ -26,7 +26,7 @@ namespace TestProject.TaskLibrary.Tasks.Lesson8
                 DoSomeMath(1, 2);
             }
             catch (ArgumentException e)
-            when (e.ParamName== "a")
+            when (e.ParamName == "a")
             {
                 logger.Write(e.Message);
             }
@@ -34,7 +34,7 @@ namespace TestProject.TaskLibrary.Tasks.Lesson8
             when (e.ParamName == "b")
             {
                 logger.Write(e.Message);
-            }            
+            }
         }
     }
 }

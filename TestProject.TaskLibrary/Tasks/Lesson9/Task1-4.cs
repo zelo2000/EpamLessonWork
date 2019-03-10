@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using TestProject.Common.Core.Interfaces;
 
-namespace TestProject.TaskLibrary.Tasks.Lesson8
+namespace TestProject.TaskLibrary.Tasks.Lesson9
 {
     public class Task1_4 : IRunnable
     {

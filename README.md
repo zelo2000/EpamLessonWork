@@ -87,7 +87,7 @@ A list is created with randomly generated elements of type string (length of the
 Number of itemss in the list before and after the transformations  are desplayed. Created a DisplayPage method which when you call it display to the console the corresponding page of the updated list (the number of items on the page is constant: 5).
 The page number you want to output was read from the console. If the entered string is not a number then the program will stop.
 
-## Lesson8
+## Lesson9
 Tasks on the topic of Exception
 ### Task1-4
 StackOverflowException and IndexOutOfRangeException have been generated. IndexOutOfRangeException has been  catched.
