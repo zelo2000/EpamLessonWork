@@ -70,7 +70,9 @@ The page number you want to output was read from the console. If the entered str
 ## Lesson6
 
 ### Task1
+**_Rectangle_** class was generated. Rectangle can be drawn in console, moved and resized. Also intersection and union of rectangles can be created.
 ### Task2
+**_Circle_** class was generated. Circle can be drawn in console, moved and resized. 
 
 ## Lesson7
 Tasks on the topic of LINQ
