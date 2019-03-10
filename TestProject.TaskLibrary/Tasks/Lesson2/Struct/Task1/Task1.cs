@@ -12,11 +12,11 @@ namespace TestProject.TaskLibrary.Tasks.Lesson2.Struct.Task1
             Person person1 = new Person();
 
             logger.Write("Input name: ");
-            person1.Name = Console.ReadLine();
+            person1.Name = logger.Read();
             logger.Write("Input surname: ");
-            person1.Surname = Console.ReadLine();
+            person1.Surname = logger.Read();
             logger.Write("Input age: ");
-            person1.Age = Convert.ToInt32(Console.ReadLine());
+            person1.Age = Convert.ToInt32(logger.Read());
 
             logger.Write(person1.AgeCheck(12));
             logger.Write(person1.AgeCheck(9));

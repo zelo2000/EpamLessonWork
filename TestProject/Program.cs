@@ -13,6 +13,7 @@ namespace TestProject
             var tasks = new IRunnable[]
             {
                 new TaskLibrary.Tasks.Lesson6.Task1(),
+                //new TaskLibrary.Tasks.Lesson6.Task2(),
                 //TO DO
             };
 

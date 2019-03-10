@@ -24,7 +24,7 @@ namespace TestProject.TaskLibrary.Tasks.Lesson5
                 {
                     result.Append(characters[random.Next(characters.Length)]);
                 }
-                words.Add(result.ToString());
+                words.Add(ToString());
             }
             return words;
         }

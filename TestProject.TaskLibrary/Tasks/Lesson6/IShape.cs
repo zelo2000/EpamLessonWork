@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TestProject.Common.Core.Interfaces;
 
 namespace TestProject.TaskLibrary.Tasks.Lesson6
 {
@@ -8,6 +9,6 @@ namespace TestProject.TaskLibrary.Tasks.Lesson6
     {
         void Move(Tuple<int, int> vector);
         void Resize(int howMany);
-        void Draw();
+        void Draw(ILog logger);
     }
 }

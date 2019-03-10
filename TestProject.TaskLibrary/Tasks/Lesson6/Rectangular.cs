@@ -1,15 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TestProject.Common.Core.Interfaces;
 
 namespace TestProject.TaskLibrary.Tasks.Lesson6
 {
     public class Rectangular : IShape
     {
-        public Point LeftTop = new Point(0, 0);
-        public Point RightTop = new Point(0, 0);
-        public Point RightBottom = new Point(0, 0);
-        public Point LeftBottom = new Point(0, 0);
+        public Point LeftTop { get; set; }
+        public Point RightTop { get; set; }
+        public Point RightBottom { get; set; }
+        public Point LeftBottom { get; set; }
+
+        public Rectangular() { }
+
+        public Rectangular(Point lt, Point rt, Point rb, Point lb)
+        {
+            LeftTop = lt;
+            RightTop = rt;
+            RightBottom = rb;
+            LeftBottom = lb;
+        }
 
         public bool IsParallelToAxes()
         {
@@ -23,6 +34,11 @@ namespace TestProject.TaskLibrary.Tasks.Lesson6
 
         public void GetUnion(Rectangular first, Rectangular second)
         {
+            LeftTop = new Point();
+            LeftBottom = new Point();
+            RightTop = new Point();
+            RightBottom = new Point();
+
             LeftTop.X = Math.Min(first.LeftTop.X, second.LeftTop.X);
             LeftBottom.X = Math.Min(first.LeftTop.X, second.LeftTop.X);
 
@@ -36,17 +52,55 @@ namespace TestProject.TaskLibrary.Tasks.Lesson6
             RightBottom.Y = Math.Max(first.RightBottom.Y, second.RightBottom.Y);
         }
 
-        public bool IsPointInRectangular(Rectangular r, Point p)
+        public void GetIntersection(Rectangular first, Rectangular second)
         {
-        }
+            LeftTop = new Point();
+            LeftBottom = new Point();
+            RightTop = new Point();
+            RightBottom = new Point();
 
-        public Rectangular GetIntersection(Rectangular first, Rectangular second)
-        {
-            Rectangular result = new Rectangular();
-
-
-
-            return result;
+            if (first.RightBottom.X >= second.LeftBottom.X)
+            {
+                RightBottom.X = first.RightBottom.X;
+                RightTop.X = first.RightBottom.X;
+                LeftBottom.X = second.LeftBottom.X;
+                LeftTop.X = second.LeftBottom.X;
+                if (first.LeftBottom.Y >= second.LeftTop.Y)
+                {
+                    RightBottom.Y = first.LeftBottom.Y;
+                    RightTop.Y = second.LeftTop.Y;
+                    LeftBottom.Y = first.LeftBottom.Y;
+                    LeftTop.Y = second.LeftTop.Y;
+                }
+                else if (first.LeftTop.Y <= second.LeftBottom.Y)
+                {
+                    RightBottom.Y = second.LeftBottom.Y;
+                    RightTop.Y = first.LeftTop.Y;
+                    LeftBottom.Y = second.LeftBottom.Y;
+                    LeftTop.Y = first.LeftTop.Y;
+                }
+            }
+            else if (first.LeftBottom.X <= second.RightBottom.X)
+            {
+                RightBottom.X = second.RightBottom.X;
+                RightTop.X = second.RightBottom.X;
+                LeftBottom.X = first.LeftBottom.X;
+                LeftTop.X = first.LeftBottom.X;
+                if (first.LeftBottom.Y >= second.LeftTop.Y)
+                {
+                    RightBottom.Y = first.LeftBottom.Y;
+                    RightTop.Y = second.LeftTop.Y;
+                    LeftBottom.Y = first.LeftBottom.Y;
+                    LeftTop.Y = second.LeftTop.Y;
+                }
+                else if (first.LeftTop.Y >= second.LeftBottom.Y)
+                {
+                    RightBottom.Y = second.LeftBottom.Y;
+                    RightTop.Y = first.LeftTop.Y;
+                    LeftBottom.Y = second.LeftBottom.Y;
+                    LeftTop.Y = first.LeftTop.Y;
+                }
+            }
         }
 
         public void Move(Tuple<int, int> vector)
@@ -73,16 +127,16 @@ namespace TestProject.TaskLibrary.Tasks.Lesson6
             RightBottom.Y += height * (howMany - 1);
         }
 
-        public void Draw()
+        public void Draw(ILog logger)
         {
 
             for (var y = 0; y < LeftTop.Y; y++)
             {
                 for (var x = 0; x < RightTop.X; x++)
                 {
-                    Console.Write(" ");
+                    logger.Write(" ");
                 }
-                Console.Write("\n");
+                logger.Write("\n");
             }
 
 
@@ -90,13 +144,13 @@ namespace TestProject.TaskLibrary.Tasks.Lesson6
             {
                 for (var x = 0; x < LeftTop.X; x++)
                 {
-                    Console.Write(" ");
+                    logger.Write(" ");
                 }
                 for (var x = LeftTop.X; x < RightTop.X; x++)
                 {
-                    Console.Write("#");
+                    logger.Write("#");
                 }
-                Console.Write("\n");
+                logger.Write("\n");
             }
         }
     }
