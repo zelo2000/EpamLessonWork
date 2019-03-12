@@ -96,3 +96,10 @@ Method DoSomeMath which generate
 - ArgumentException("Parameter should be greater than 0", "a"), if à < 0
 - ArgumentException("Parameter should be less than 0", "b"), if b > 0 
 have been created.
+
+## Lesson10
+Tasks on the topic of File
+### Task1
+The contents of the given directory are displayed in the form of a list of files, sub directories containing the contents of these directories.
+### Task2
+An application is created that allows you to find the .txt file with a part of its name.
