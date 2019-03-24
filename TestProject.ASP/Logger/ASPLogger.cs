@@ -15,13 +15,12 @@ namespace TestProject.ASP
 
         public string Read()
         {
-            return ViewData["InputData"].ToString();
+            throw new NotImplementedException();
         }
 
         public void Write(string log)
         {
             ViewData["OutputData"] += log;
-            //File.AppendAllText(Directory.GetCurrentDirectory() + "/Views/Task/Content.cshtml", $"<pre>\n{log}\n</pre>\n");
         }
     }
 }

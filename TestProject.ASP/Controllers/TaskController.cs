@@ -17,13 +17,6 @@ namespace TestProject.ASP.Controllers
             ViewData["Title"] = lesson + " - " + task;
             TaskStorage.Tasks[lesson][task].Run();
             return View();
-        }
-
-        public EmptyResult Name()
-        {
-
-            return new EmptyResult();
-        }
-           
+        }          
     }
 }

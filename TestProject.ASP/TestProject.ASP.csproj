@@ -14,4 +14,8 @@
     <ProjectReference Include="..\TestProject.TaskLibrary\TestProject.TaskLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>
