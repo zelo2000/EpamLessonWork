@@ -2,22 +2,23 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using TestProject.Common.Core;
 using TestProject.Common.Core.Interfaces;
 
 namespace TestProject.TaskLibrary.Tasks.Lesson10
 {
     public class Task2 : IRunnable
     {
-        public void Run(ILog logger)
+        public void Run()
         {
-            logger.Write("Input part of path: ");
-            string root = logger.Read();
-            logger.Write("Input part of file name: ");
-            string name = logger.Read();
+            Logger.Write("Input part of path: ");
+            string root = Logger.Read();
+            Logger.Write("Input part of file name: ");
+            string name = Logger.Read();
             List<string> files = Find(root, name);
             foreach (var file in files)
             {
-                logger.Write(file + "\n");
+                Logger.Write(file + "\n");
             }
         }
 

@@ -9,6 +9,6 @@ namespace TestProject.TaskLibrary.Tasks.Lesson6
     {
         void Move(Tuple<int, int> vector);
         void Resize(int howMany);
-        void Draw(ILog logger);
+        void Draw();
     }
 }

@@ -1,23 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TestProject.Common.Core;
 using TestProject.Common.Core.Interfaces;
 
 namespace TestProject.TaskLibrary.Tasks.Lesson2.Enums.Task1
 {
     public class Task1 : IRunnable
     {
-        public void Run(ILog logger)
+        public void Run()
         {
-            logger.Write("Input month number: ");
-            int n = Convert.ToInt32(logger.Read());
+            Logger.Write("Input month number: ");
+            int n = Convert.ToInt32(Logger.Read());
             if ((n <= 12) && (n >= 1))
             {
-                logger.Write(Enum.GetName(typeof(Months), n) + "\n");
+                Logger.Write(Enum.GetName(typeof(Months), n) + "\n");
             }
             else
             {
-                logger.Write("Wrong output\n");
+                Logger.Write("Wrong output\n");
             }
         }
     }

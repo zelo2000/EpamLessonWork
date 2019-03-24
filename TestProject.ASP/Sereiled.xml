@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ArrayOfCar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Car>
+    <CarId>123456</CarId>
+    <Price>15</Price>
+    <Quantity>3</Quantity>
+    <Total>45</Total>
+  </Car>
+  <Car>
+    <CarId>654321</CarId>
+    <Price>10</Price>
+    <Quantity>1</Quantity>
+    <Total>10</Total>
+  </Car>
+  <Car>
+    <CarId>456123</CarId>
+    <Price>5</Price>
+    <Quantity>2</Quantity>
+    <Total>10</Total>
+  </Car>
+</ArrayOfCar>

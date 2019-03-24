@@ -1,5 +1,6 @@
 using System;
 using System.Diagnostics;
+using TestProject.Common.Core;
 using TestProject.Common.Core.Interfaces;
 
 namespace TestProject.TaskLibrary.Tasks.Lesson6
@@ -20,13 +21,13 @@ namespace TestProject.TaskLibrary.Tasks.Lesson6
             Radius = r;
         }
 
-        public void Draw(ILog logger)
+        public void Draw()
         {
             double thickness = 0.4;
 
             for (var i = 0; i <= Center.Y * thickness; i++)
             {
-                logger.Write("\n");
+                Logger.Write("\n");
             }
 
             double rIn = Radius - thickness;
@@ -35,20 +36,20 @@ namespace TestProject.TaskLibrary.Tasks.Lesson6
             for (double y = Radius; y >= -Radius; --y)
             {
                 for (var i = 0; i <= Center.X; i++)
-                    logger.Write(" ");
+                    Logger.Write(" ");
                 for (double x = -Radius; x < rOut; x += 0.5)
                 {
                     double value = x * x + y * y;
                     if (value >= rIn * rIn && value <= rOut * rOut)
                     {
-                        logger.Write("*");
+                        Logger.Write("*");
                     }
                     else
                     {
-                        logger.Write(" ");
+                        Logger.Write(" ");
                     }
                 }
-                logger.Write("\n");
+                Logger.Write("\n");
             }
         }
 

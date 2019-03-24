@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using TestProject.Common.Core.Interfaces;
 using System.Linq;
+using TestProject.Common.Core;
+
 namespace TestProject.TaskLibrary.Tasks.Lesson7
 {
     public class Task1_3 : IRunnable
     {
-        public void Run(ILog logger)
+        public void Run()
         {
             var people = new List<Person>
             {
@@ -18,8 +20,8 @@ namespace TestProject.TaskLibrary.Tasks.Lesson7
                 new Person("Romko", 21, new List<string>{ "067","095"}),
             };
 
-            logger.Write("Name and Age of people:\n");
-            logger.Write(string.Join("\n", people.Select(x => x.Name + " " + x.Age)));
+            Logger.Write("Name and Age of people:\n");
+            Logger.Write(string.Join("\n", people.Select(x => x.Name + " " + x.Age)));
 
             people.AddRange(new List<Person>
             {
@@ -27,12 +29,12 @@ namespace TestProject.TaskLibrary.Tasks.Lesson7
                 new Person("Nadia", 32, new List<string> { "097", "095" })
             });
             var numbers = people.SelectMany(x => x.PhoneNumbers);
-            logger.Write("Phone numbeer of all people:\n");
-            logger.Write(string.Join("\n", numbers));
+            Logger.Write("Phone numbeer of all people:\n");
+            Logger.Write(string.Join("\n", numbers));
 
-            logger.Write("Phone numbeer of people which age less than 20:\n");
+            Logger.Write("Phone numbeer of people which age less than 20:\n");
             var olderThan = people.Where(x => x.Age < 20).SelectMany(x => x.PhoneNumbers);
-            logger.Write(string.Join("\n", olderThan));
+            Logger.Write(string.Join("\n", olderThan));
         }
     }
 }

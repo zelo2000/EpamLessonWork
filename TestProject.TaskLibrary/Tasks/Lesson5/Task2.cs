@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TestProject.Common.Core;
 using TestProject.Common.Core.Interfaces;
 
 namespace TestProject.TaskLibrary.Tasks.Lesson5
 {
     public class Task2 : IRunnable
     {
-        public void Run(ILog logger)
+        public void Run()
         {
             var people = new List<Person>
             {
@@ -28,9 +29,9 @@ namespace TestProject.TaskLibrary.Tasks.Lesson5
             {
                 foreach (var number in person.PhoneNumbers)
                 {
-                    logger.Write($"{number} ");
+                    Logger.Write($"{number} ");
                 }
-                logger.Write("\n");
+                Logger.Write("\n");
             }
         }
     }

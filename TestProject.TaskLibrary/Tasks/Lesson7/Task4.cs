@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using TestProject.Common.Core.Interfaces;
 using System.Linq;
+using TestProject.Common.Core;
 
 namespace TestProject.TaskLibrary.Tasks.Lesson7
 {
@@ -12,23 +13,23 @@ namespace TestProject.TaskLibrary.Tasks.Lesson7
         const int NumberWordsInPage = 5;
         const int NumberLetersInWord = 4;
 
-        public void Run(ILog logger)
+        public void Run()
         {
-            logger.Write("Input words number: ");
-            int amountOfElement = Convert.ToInt32(logger.Read());
+            Logger.Write("Input words number: ");
+            int amountOfElement = Convert.ToInt32(Logger.Read());
             List<string> words = GenerateList(amountOfElement);
 
-            logger.Write($"Start number of elements: {words.Count}\n");
+            Logger.Write($"Start number of elements: {words.Count}\n");
             words.RemoveAll(x => x.First() == 'Z');
             words = words.Distinct()
                          .OrderByDescending(x => x)
                          .ToList();
-            logger.Write($"Number of elements after delete: {words.Count}\n");
+            Logger.Write($"Number of elements after delete: {words.Count}\n");
 
-            logger.Write("Input page number: ");
-            if (int.TryParse(logger.Read(), out int amountofPages))
+            Logger.Write("Input page number: ");
+            if (int.TryParse(Logger.Read(), out int amountofPages))
             {
-                DisplayPage(amountofPages, words, logger);
+                DisplayPage(amountofPages, words);
             }
         }
 
@@ -50,11 +51,11 @@ namespace TestProject.TaskLibrary.Tasks.Lesson7
             return words;
         }
 
-        private void DisplayPage(int number, List<string> words, ILog logger)
+        private void DisplayPage(int number, List<string> words)
         {
             foreach (string word in words.GetRange((number - 1) * NumberWordsInPage, NumberWordsInPage))
             {
-                logger.Write(word + "\n");
+                Logger.Write(word + "\n");
             }
         }
     }

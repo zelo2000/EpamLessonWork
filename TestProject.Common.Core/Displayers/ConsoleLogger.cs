@@ -10,7 +10,11 @@ namespace TestProject.Common.Core.Displayers
     /// </summary>
     public class ConsoleLogger : ILog
     {
-        public ConsoleLogger() { }
+        public ConsoleLogger()
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.InputEncoding = System.Text.Encoding.Unicode;
+        }
 
         public string Read()
         {
