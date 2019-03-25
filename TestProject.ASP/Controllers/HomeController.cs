@@ -16,8 +16,6 @@ namespace TestProject.ASP.Controllers
     {
         public IActionResult Index()
         {
-            ///System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + "/Views/Task/Content.cshtml", "");
-
             var lessonList = new SortedDictionary<string, List<string>>();
             foreach (var lesson in TaskStorage.Tasks)
             {

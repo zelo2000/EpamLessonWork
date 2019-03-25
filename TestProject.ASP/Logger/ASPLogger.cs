@@ -9,8 +9,14 @@ using Microsoft.AspNetCore.Mvc.ViewFeatures;
 
 namespace TestProject.ASP
 {
+    /// <summary>
+    /// Сlass for ASP .Net input/output.
+    /// </summary>
     public class ASPLogger : ILog
     {
+        /// <summary>
+        /// Input/output data
+        /// </summary>
         public static ViewDataDictionary ViewData { private get; set; }
 
         public string Read()
