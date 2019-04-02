@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TestProject.Common.Core;
 using TestProject.Common.Core.Interfaces;
 
-namespace TestProject.TaskLibrary.Tasks.Lesson3.Task3
+namespace TestProject.TaskLibrary.Tasks.Lesson3.Task_3
 {
     public class Figure
     {
@@ -24,10 +25,10 @@ namespace TestProject.TaskLibrary.Tasks.Lesson3.Task3
         /// <summary>
         /// The method that displays the name of the class that implements and coordinate of the top right corner.
         /// </summary>
-        /// <param name="logger"></param>
-        public virtual void Draw(ILog logger)
+        /// <param name="Logger"></param>
+        public virtual void Draw()
         {
-            logger.Write($"Figure ({X}, {Y})\n");
+            Logger.Write($"Figure ({X}, {Y})\n");
         }
     }
 }

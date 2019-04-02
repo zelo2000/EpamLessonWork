@@ -1,7 +1,9 @@
 ﻿using System;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration.Xml;
+using System.Configuration;
+using TestProject.Common.Core;
 using TestProject.Common.Core.Displayers;
-using TestProject.Common.Core.Interfaces;
+using TestProject.TaskLibrary;
 
 namespace TestProject
 {
@@ -9,21 +11,15 @@ namespace TestProject
     {
         static void Main(string[] args)
         {
-            //List of .NetLab Tasks
-            var tasks = new IRunnable[]
-            {
-                new TaskLibrary.Tasks.Lesson10.Task2(),
-                //TO DO
-            };
 
-            ConsoleLogger consoleLogger = new ConsoleLogger();
+            Logger.SetLogger(new ConsoleLogger());
+     
+            string lessonNumber = ConfigurationManager.AppSettings["lesson"];
+            string taskNumber = ConfigurationManager.AppSettings["task"];
 
-            foreach (var task in tasks)
-            {
-                task.Run(consoleLogger);
-            }
+            TaskStorage.Tasks[lessonNumber][taskNumber].Run();
 
-            consoleLogger.ReadKey();
+            Console.ReadKey();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TestProject.Common.Core;
 using TestProject.Common.Core.Interfaces;
 
 namespace TestProject.TaskLibrary.Tasks.Lesson9
@@ -19,7 +20,7 @@ namespace TestProject.TaskLibrary.Tasks.Lesson9
             }
         }
 
-        public void Run(ILog logger)
+        public void Run()
         {
             try
             {
@@ -28,12 +29,12 @@ namespace TestProject.TaskLibrary.Tasks.Lesson9
             catch (ArgumentException e)
             when (e.ParamName == "a")
             {
-                logger.Write(e.Message);
+                Logger.Write(e.Message);
             }
             catch (ArgumentException e)
             when (e.ParamName == "b")
             {
-                logger.Write(e.Message);
+                Logger.Write(e.Message);
             }
         }
     }

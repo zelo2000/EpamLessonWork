@@ -1,18 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using TestProject.Common.Core.Interfaces;
+using TestProject.TaskLibrary.Tasks.Lesson3.Task_1;
 
-namespace TestProject.TaskLibrary.Tasks.Lesson3.Task1
+namespace TestProject.TaskLibrary.Tasks.Lesson3
 {
     public class Task1 : IRunnable
     {
-        public void Run(ILog logger)
+        public void Run()
         {
             Rectangle rect = new Rectangle();
-            rect.Draw(logger);
+            rect.Draw();
             Square square = new Square();
-            square.Draw(logger);
+            square.Draw();
         }
     }
 }

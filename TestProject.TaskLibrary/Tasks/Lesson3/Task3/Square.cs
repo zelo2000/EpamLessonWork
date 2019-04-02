@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TestProject.Common.Core;
 using TestProject.Common.Core.Interfaces;
 
-namespace TestProject.TaskLibrary.Tasks.Lesson3.Task3
+namespace TestProject.TaskLibrary.Tasks.Lesson3.Task_3
 {
     class Square : Figure
     {
@@ -12,10 +13,10 @@ namespace TestProject.TaskLibrary.Tasks.Lesson3.Task3
         /// <summary>
         /// The method that displays the name of the class that implements and coordinate of the top right corner.
         /// </summary>
-        /// <param name="logger"></param>
-        public override void Draw(ILog logger)
+        /// <param name="Logger"></param>
+        public override void Draw()
         {
-            logger.Write($"Square ({X}, {Y})\n");
+            Logger.Write($"Square ({X}, {Y})\n");
         }
     }
 }

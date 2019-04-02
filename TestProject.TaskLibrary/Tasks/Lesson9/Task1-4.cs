@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TestProject.Common.Core;
 using TestProject.Common.Core.Interfaces;
 
 namespace TestProject.TaskLibrary.Tasks.Lesson9
@@ -18,7 +19,7 @@ namespace TestProject.TaskLibrary.Tasks.Lesson9
             return arr[100];
         }
 
-        public void Run(ILog logger)
+        public void Run()
         {
             try
             {
@@ -27,11 +28,11 @@ namespace TestProject.TaskLibrary.Tasks.Lesson9
             }
             catch (IndexOutOfRangeException e)
             {
-                logger.Write(e.Message);
+                Logger.Write(e.Message);
             }
             catch (StackOverflowException e)
             {
-                logger.Write(e.Message);
+                Logger.Write(e.Message);
             }
 
         }

@@ -1,21 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TestProject.Common.Core;
 using TestProject.Common.Core.Interfaces;
 
 namespace TestProject.TaskLibrary.Tasks.Lesson4
 {
     public class Task5 : IRunnable
     {
-        public void Run(ILog logger)
+        public void Run()
         {
-            int m = Convert.ToInt32(logger.Read());
-            int n = Convert.ToInt32(logger.Read());
+            int m = Convert.ToInt32(Logger.Read());
+            int n = Convert.ToInt32(Logger.Read());
             int[][] jaggedArray = new int[m][];
 
             for (var i = 0; i < m; i++)
             {
-                var tempArray = Utility.ReadArray(logger);
+                var tempArray = Utility.ReadArray();
                 jaggedArray[i] = tempArray;
             }
 
@@ -35,9 +36,9 @@ namespace TestProject.TaskLibrary.Tasks.Lesson4
 
             for (var i = 0; i < n; i++)
             {
-                logger.Write(maxVector[i] + " ");
+                Logger.Write(maxVector[i] + " ");
             }
-            logger.Write("\n");
+            Logger.Write("\n");
         }
     }
 }

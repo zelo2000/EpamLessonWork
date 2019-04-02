@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using TestProject.Common.Core;
 using TestProject.Common.Core.Interfaces;
 
 namespace TestProject.TaskLibrary.Tasks.Lesson6
@@ -127,16 +128,16 @@ namespace TestProject.TaskLibrary.Tasks.Lesson6
             RightBottom.Y += height * (howMany - 1);
         }
 
-        public void Draw(ILog logger)
+        public void Draw()
         {
 
             for (var y = 0; y < LeftTop.Y; y++)
             {
                 for (var x = 0; x < RightTop.X; x++)
                 {
-                    logger.Write(" ");
+                    Logger.Write(" ");
                 }
-                logger.Write("\n");
+                Logger.Write("\n");
             }
 
 
@@ -144,13 +145,13 @@ namespace TestProject.TaskLibrary.Tasks.Lesson6
             {
                 for (var x = 0; x < LeftTop.X; x++)
                 {
-                    logger.Write(" ");
+                    Logger.Write(" ");
                 }
                 for (var x = LeftTop.X; x < RightTop.X; x++)
                 {
-                    logger.Write("#");
+                    Logger.Write("#");
                 }
-                logger.Write("\n");
+                Logger.Write("\n");
             }
         }
     }

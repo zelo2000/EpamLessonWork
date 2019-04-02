@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model SortedDictionary<string, List<string>>
+
+<div class="tasks">
+    <h2>Lessons List</h2>
+    <ul>
+        @{foreach (var lesson in Model)
+            {
+                <li>
+                    <h4>@lesson.Key</h4>
+                    <ul>
+                        @{foreach (var task in Model[lesson.Key])
+                            {
+                                <li><a href="Task/Index/?lesson=@lesson.Key&task=@task">@task</a></li>
+                            }
+                        }
+                    </ul>
+                </li>
+            }
+        }
+    </ul>
+</div>
+
