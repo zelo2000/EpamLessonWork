@@ -103,3 +103,19 @@ Tasks on the topic of File
 The contents of the given directory are displayed in the form of a list of files, sub directories containing the contents of these directories.
 ### Task2
 An application is created that allows you to find the .txt file with a part of its name.
+
+## Lesson11
+Tasks on the topic of Serialization
+### Task1
+XML serialize and deserialize a collection of instances **_Car_** class.
+### Task2
+JSON serialize and deserialize a collection of instances **_Car_** class.
+### Task3
+Binary serialize and deserialize a collection of instances **_Car_** class.
+
+## Lesson12
+Tasks on the topic of Culture
+### Task1
+Given names of two students. These two lines are compared using the regional settings. It is determined which of these two lines is longer. It is also determined whether it is true that the first and last characters of each of these lines are the same.
+### Task2
+Displays the current date in the properties format for a given culture (culture identifier is read from the console).
