@@ -11,6 +11,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject.TaskLibrary", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject.ASP", "TestProject.ASP\TestProject.ASP.csproj", "{76E37FDD-D398-42D2-8EDE-339071C716C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Core", "Calculator.Core\Calculator.Core.csproj", "{4AB3C86C-A603-48ED-AD98-02EDB4861623}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Client", "Calculator.Client\Calculator.Client.csproj", "{11DA5222-8219-465D-A783-78EB3BBD6506}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.NUnitTest", "Calculator.NUnitTest\Calculator.NUnitTest.csproj", "{FDFA5305-5813-4C01-8259-B9E501721359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.MSUnitTest", "Calculator.MSUnitTest\Calculator.MSUnitTest.csproj", "{0C14A1BB-2647-4722-AB8F-7ACCC7E81020}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4AB3C86C-A603-48ED-AD98-02EDB4861623} = {4AB3C86C-A603-48ED-AD98-02EDB4861623}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		App.config|Any CPU = App.config|Any CPU
@@ -42,6 +53,30 @@ Global
 		{76E37FDD-D398-42D2-8EDE-339071C716C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76E37FDD-D398-42D2-8EDE-339071C716C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76E37FDD-D398-42D2-8EDE-339071C716C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AB3C86C-A603-48ED-AD98-02EDB4861623}.App.config|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AB3C86C-A603-48ED-AD98-02EDB4861623}.App.config|Any CPU.Build.0 = Debug|Any CPU
+		{4AB3C86C-A603-48ED-AD98-02EDB4861623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AB3C86C-A603-48ED-AD98-02EDB4861623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AB3C86C-A603-48ED-AD98-02EDB4861623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AB3C86C-A603-48ED-AD98-02EDB4861623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11DA5222-8219-465D-A783-78EB3BBD6506}.App.config|Any CPU.ActiveCfg = Debug|Any CPU
+		{11DA5222-8219-465D-A783-78EB3BBD6506}.App.config|Any CPU.Build.0 = Debug|Any CPU
+		{11DA5222-8219-465D-A783-78EB3BBD6506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11DA5222-8219-465D-A783-78EB3BBD6506}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11DA5222-8219-465D-A783-78EB3BBD6506}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11DA5222-8219-465D-A783-78EB3BBD6506}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDFA5305-5813-4C01-8259-B9E501721359}.App.config|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDFA5305-5813-4C01-8259-B9E501721359}.App.config|Any CPU.Build.0 = Debug|Any CPU
+		{FDFA5305-5813-4C01-8259-B9E501721359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDFA5305-5813-4C01-8259-B9E501721359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDFA5305-5813-4C01-8259-B9E501721359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDFA5305-5813-4C01-8259-B9E501721359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C14A1BB-2647-4722-AB8F-7ACCC7E81020}.App.config|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C14A1BB-2647-4722-AB8F-7ACCC7E81020}.App.config|Any CPU.Build.0 = Debug|Any CPU
+		{0C14A1BB-2647-4722-AB8F-7ACCC7E81020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C14A1BB-2647-4722-AB8F-7ACCC7E81020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C14A1BB-2647-4722-AB8F-7ACCC7E81020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C14A1BB-2647-4722-AB8F-7ACCC7E81020}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,9 +11,8 @@ namespace TestProject
     {
         static void Main(string[] args)
         {
-
             Logger.SetLogger(new ConsoleLogger());
-     
+
             string lessonNumber = ConfigurationManager.AppSettings["lesson"];
             string taskNumber = ConfigurationManager.AppSettings["task"];
 
