@@ -12,20 +12,20 @@ namespace TestProject.Common.Core
     {
         private static ILog _console;
 
-        private Logger(ILog Logger)
+        private Logger(ILog logger)
         {
-            _console = Logger;
+            _console = logger;
         }
 
         /// <summary>
         /// Seting a specific logger
         /// </summary>
         /// <param name="Logger">Specific logger</param>
-        public static void SetLogger(ILog Logger)
+        public static void SetLogger(ILog logger)
         {
             if (_console == null)
             {
-                _console = Logger;
+                _console = logger;
             }
         }
 
