@@ -13,11 +13,12 @@ namespace TestProject
         {
             Logger.SetLogger(new ConsoleLogger());
 
+            TaskManager taskManager = new TaskManager();
+            var allTasks = taskManager.GetTasks();
+
             string lessonNumber = ConfigurationManager.AppSettings["lesson"];
             string taskNumber = ConfigurationManager.AppSettings["task"];
-
-            TaskManager taskManager = new TaskManager();
-            taskManager.GetTasks()[lessonNumber][taskNumber].Run();
+            allTasks[lessonNumber][taskNumber].Run();
 
             Console.ReadKey();
         }
