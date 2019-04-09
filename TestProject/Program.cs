@@ -16,7 +16,8 @@ namespace TestProject
             string lessonNumber = ConfigurationManager.AppSettings["lesson"];
             string taskNumber = ConfigurationManager.AppSettings["task"];
 
-            TaskStorage.Tasks[lessonNumber][taskNumber].Run();
+            TaskManager taskManager = new TaskManager();
+            taskManager.GetTasks()[lessonNumber][taskNumber].Run();
 
             Console.ReadKey();
         }

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using TestProject.Common.Core;
 using TestProject.Common.Core.Interfaces;
+using TestProject.TaskLibrary.Tasks.Lesson2.Enums.Task2;
 
-namespace TestProject.TaskLibrary.Tasks.Lesson2.Enums.Task2
+namespace TestProject.TaskLibrary.Tasks.Lesson2
 {
     public class Task2 : IRunnable
     {
